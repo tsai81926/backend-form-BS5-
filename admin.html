@@ -1,10 +1,57 @@
----
-title: main-admin
-layout: ./app/layout.ejs
-engine: ejs
-current: admin
----
-<div class="container">
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>main-admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body>
+      <div class="d-flex">
+        <header class="sidebar d-flex flex-column justify-content-between p-5">
+          <div class="sidebar-content">
+            <h1 class="pb-4"><a href="#"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/e14818f156111b5b0a00492903c1552d319ec9c5/week5/logo-ANSWER.svg" alt="answer-logo"></a></h1>
+            <nav class="sidebar-content-items bg-light d-flex flex-column justify-content-between">
+              <a href="#" class="nav-link pb-4">
+                <span class="material-icons pe-4">insert_chart</span>Dashboard
+              </a>
+              <a href="#" class="nav-link pb-4">
+                <span class="material-icons pe-4">question_answer</span>Question
+              </a>
+              <a href="#" class="nav-link pb-4">
+                <span class="material-icons pe-4">assignment</span>Assignment
+              </a>
+              <a href="#" class="nav-link pb-4">
+                <span class="material-icons pe-4">video_library</span>Course
+              </a>
+              <a href="#" class="nav-link pb-4">
+                <span class="material-icons pe-4">people_alt</span>Admin
+              </a>
+              <a href="#" class="nav-link pb-4">
+                <span class="material-icons pe-4">settings</span>Settings
+              </a>
+            </nav>
+          </div>
+          <div class="sidebar-editor" style="transform: rotate(0);">  
+            <ul class="d-flex list-unstyled">
+              <li class="pe-3"><a class="stretched-link" href="#"><img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week5/andychen.jpeg?raw=true" alt="editor-logo"></a></li>
+              <li>
+                <h6 class="fw-bold">Andy Chen</h6>
+                <p class="text-muted">andy0401@mail.com</p>
+              </li>
+            </ul>
+          </div>
+        </header>
+
+    <div class="container">
     <table class="table table-hover">
       <thead>
       <tr>
@@ -109,3 +156,9 @@ current: admin
     </tbody>
     </table>
   </div>
+  </div>
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/all.js"></script>
+  </body>
+
+</html>
