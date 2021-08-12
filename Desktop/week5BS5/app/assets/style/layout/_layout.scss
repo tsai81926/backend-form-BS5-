@@ -1,0 +1,19 @@
+.sidebar {
+    width: 23%;
+    height: 100vh;   /*自適應螢幕大小*/
+}
+.nav-link {
+    color: #000;
+    text-decoration: none;
+    .material-icons {
+        vertical-align: bottom;  /*icon跟文字對齊*/
+    }
+}
+
+.sidebar-editor {
+    img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+}

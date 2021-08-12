@@ -1,0 +1,348 @@
+---
+title: main-admin
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+<div class="admin p-md-5">
+  <div class="container">
+    <div class="admin-head d-flex justify-content-between ">
+      <div class="admin-article d-flex align-items-center">
+        <h3>Admin</h3>
+        <a type="button" data-bs-toggle="modal" data-bs-target="#add-newAdmin-form" class="add-admin ps-7 fw-bold"><span class="material-icons icon-success pe-md-1">add</span>Add New Admin</a>
+      </div>
+      <ul class="admin-helper d-flex list-unstyled pe-md-3">
+        <li><a class="admin-helper-link" href="#"><span class="material-icons">search</span></a></li>
+        <li><a class="admin-helper-link" href="#"><span class="material-icons ps-md-3">notifications_active</span></a></li>
+      </ul>
+    </div>
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Verified</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">#1</th>
+        <td>Emir Wicks</td>
+        <td>emir.wicks@mail.com</td>
+        <td>Yes</td>
+        <td class="d-flex justify-content-around">
+          <a type="button" data-bs-toggle="modal" data-bs-target="#admin-editor-card"><span class="material-icons">visibility</span></a>
+          <a type="button" data-bs-toggle="modal" data-bs-target="#edit-admin-form"><span class="material-icons">edit</span></a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">#2</th>
+        <td>Zaina Goldsmith</td>
+        <td>zaina.goldsmith@mail.com</td>
+        <td>Yes</td>
+        <td class="d-flex justify-content-around">
+          <span class="material-icons">visibility</span><span class="material-icons">edit</span>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">#3</th>
+        <td>Mahima Lopez</td>
+        <td>mahima.lopez@mail.com</td>
+        <td>Yes</td>
+        <td class="d-flex justify-content-around">
+          <span class="material-icons">visibility</span><span class="material-icons">edit</span>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">#4</th>
+        <td>Pharrell Murray</td>
+        <td>pharrell.murray@mail.com</td>
+        <td>Yes</td>
+        <td class="d-flex justify-content-around">
+          <span class="material-icons">visibility</span><span class="material-icons">edit</span>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">#5</th>
+        <td>Annika Mcbride</td>
+        <td>annika.mcbride@mail.com</td>
+        <td>Yes</td>
+        <td class="d-flex justify-content-around">
+          <span class="material-icons">visibility</span><span class="material-icons">edit</span>
+        </td>
+      </tr>
+          <tr>
+        <th scope="row">#6</th>
+        <td>Fatimah Clark</td>
+        <td>fatimah.clark@mail.com</td>
+        <td>Yes</td>
+        <td class="d-flex justify-content-around">
+          <span class="material-icons">visibility</span><span class="material-icons">edit</span>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">#7</th>
+        <td>Klaudia Rhodes</td>
+        <td>zklaudia.rhodes@mail.com</td>
+        <td>Yes</td>
+        <td class="d-flex justify-content-around">
+          <span class="material-icons">visibility</span><span class="material-icons">edit</span>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">#8</th>
+        <td>Tillie Lucero</td>
+        <td>tillie.lucero@mail.com</td>
+        <td>Yes</td>
+        <td class="d-flex justify-content-around">
+          <span class="material-icons">visibility</span><span class="material-icons">edit</span>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">#9</th>
+        <td>Sabrina Stephenson</td>
+        <td>sabrina.stephenson@mail.com</td>
+        <td>Yes</td>
+        <td class="d-flex justify-content-around">
+          <span class="material-icons">visibility</span><span class="material-icons">edit</span>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">#10</th>
+        <td>Annie Smith</td>
+        <td>annie.smith@mail.com</td>
+        <td>Yes</td>
+        <td class="d-flex justify-content-around">
+          <span class="material-icons">visibility</span><span class="material-icons">edit</span>
+        </td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
+  <nav class="d-flex justify-content-end mt-md-9">
+    <ul class="pagination text-dark">
+      <li class="page-item">
+        <a class="page-link" href="#">
+          <span><</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">
+          <span>></span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+<!--admin-editor-modal-->
+<div class="modal fade" id="admin-editor-card" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <!--卡片-->
+        <div class="card mb-md-3" style="max-width: 540px;">  
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week5/emir.jpeg?raw=true" style="width:141px; height: 100%; object-fit: cover;" alt="admin-logo-1">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title">#1</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <p class="card-text fw-bold m-md-0">Admin</p>
+                <h3 class="fw-bold">Emir Wicks</h3>
+                <p class="card-text"><small class="text-muted">emir.wicks@mail.com</small></p>
+                <!--手風琴-->
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#admin-collapse-1" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Verified
+                      </button>
+                    </h2>
+                    <div id="admin-collapse-1" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                      <button type="button" class="btn btn-outline-success mt-md-1" style="width: 146px;">Deactivate</button> 
+                      <button type="button" class="btn btn-outline-success mt-md-1 ms-md-3" data-bs-target="#edit-admin-form" data-bs-toggle="modal" style="width: 92px;">Edit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--add-newAdmin-form-->
+<div class="modal fade" id="add-newAdmin-form" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-body p-md-5">
+        <!--Account-->
+        <div class="d-flex justify-content-between">
+          <h3 class="card-title mb-6 fw-bold">New Admin</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <h5 class="fw-bold mb-2">Account</h5>
+        <div class="mb-2">
+          <label for="exampleFormControlInput1" class="form-label">Name</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Mr.Tsai">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Email</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="hello@example.com">
+        </div>
+        <div class="border-bottom mb-3"></div>
+        <!--Verification-->
+        <h5 class="fw-bold mb-2">Verification</h5>
+        <p class="mb-2"><span class="material-icons text-danger me-1" style="vertical-align: bottom;">warning</span>Unverified</p>    
+        <button type="button" class="btn btn-outline-success border mb-3" style="width: 100%;">Send Verification Mail</button>
+        <div class="border-bottom mb-3"></div>
+        <!--選單-->
+        <h5 class="fw-bold mb-2">Access Level</h5>
+        <select class="form-select text-secondary mb-3" aria-label="Default select example">
+          <option selected class="text-secondary">-Choose access level-</option>
+          <option value="1">Junior</option>
+          <option value="2">Mid-level</option>
+          <option value="3">Senior</option>
+          <option value="4">Highest</option>
+        </select>
+        <div class="border-bottom mb-3"></div>
+        <!--CheckBox-->
+        <h5 class="fw-bold mb-2">Custom Access</h5>
+        <div class="form-check mb-md-2">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckLecture">
+          <label class="form-check-label" for="flexCheckChecked">
+            Lecture
+          </label>
+        </div>
+        <div class="form-check mb-md-2">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckCoupon">
+          <label class="form-check-label" for="flexCheckDefault">
+            Coupon
+          </label>
+        </div>
+        <div class="form-check mb-md-2">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckMessage">
+          <label class="form-check-label" for="flexCheckDefault">
+            Message
+          </label>
+        </div>
+        <div class="form-check mb-md-2">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckSetting">
+          <label class="form-check-label" for="flexCheckDefault">
+            Setting
+          </label>
+        </div>
+        <div class="form-check mb-md-2">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckTaskMenu">
+          <label class="form-check-label" for="flexCheckDefault">
+            Task Menu
+          </label>
+        </div>
+        <div class="border-bottom mb-5"></div>
+        <div class="add-admin d-flex justify-content-end">
+          <button type="button" class="btn btn-outline-success me-md-2" data-bs-dismiss="modal" style="width:113px;">Cancel</button>
+          <button type="button" class="btn btn-outline-success" style="width:93px;">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--edit-admin-form-->
+<div class="modal fade" id="edit-admin-form" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-body p-md-5">
+        <!--Account-->
+        <div class="d-flex justify-content-between">
+          <h3 class="card-title mb-6 fw-bold">Edit Admin</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <h5 class="fw-bold mb-2">Account</h5>
+        <div class="mb-2">
+          <label for="exampleFormControlInput1" class="form-label">Name</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" value="Emir Wicks">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Email</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" value="emir.wicks@mail.com">
+        </div>
+        <div class="border-bottom mb-3"></div>
+        <!--Verification-->
+        <h5 class="fw-bold mb-2">Verification</h5>
+        <div class="d-flex justify-content-md-between">
+          <p class="mb-2"><span class="material-icons text-success me-1" style="vertical-align: bottom;">check_circle</span>Verified</p>
+          <p>2020/4/12</p>
+        </div>
+        <button type="button" disabled class="btn btn-outline-success text-secondary border mb-3" style="width: 100%;">Send Verification Mail</button>
+        <div class="border-bottom mb-3"></div>
+        <!--選單-->
+        <h5 class="fw-bold mb-2">Access Level</h5>
+        <select class="form-select text-dark mb-3" aria-label="Default select example">
+          <option value="1">Junior</option>
+          <option selected value="2">Mid-level</option>
+          <option value="3">Senior</option>
+          <option value="4">Highest</option>
+        </select>
+        <div class="border-bottom mb-3"></div>
+        <!--CheckBox-->
+        <h5 class="fw-bold mb-2">Custom Access</h5>
+        <div class="form-check mb-md-2">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckLecture">
+          <label class="form-check-label" for="flexCheckChecked">
+            Lecture
+          </label>
+        </div>
+        <div class="form-check mb-md-2">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckCoupon">
+          <label class="form-check-label" for="flexCheckDefault">
+            Coupon
+          </label>
+        </div>
+        <div class="form-check mb-md-2">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckMessage">
+          <label class="form-check-label" for="flexCheckDefault">
+            Message
+          </label>
+        </div>
+        <div class="form-check mb-md-2">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckSetting">
+          <label class="form-check-label" for="flexCheckDefault">
+            Setting
+          </label>
+        </div>
+        <div class="form-check mb-md-2">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckTaskMenu">
+          <label class="form-check-label" for="flexCheckDefault">
+            Task Menu
+          </label>
+        </div>
+        <div class="border-bottom mb-3"></div>
+        <!--Deactivate Account-->
+        <h5 class="fw-bold mb-2">Deactivate Account</h5>
+        <p class="mb-2 text-danger"><span class="material-icons text-danger me-1" style="vertical-align: bottom;">warning</span>This cannot be undone!</p>    
+        <button type="button" class="btn btn-outline-danger mb-3" style="width: 100%;">Deactivate This Account</button>
+        <div class="border-bottom mb-5"></div>
+        <div class="add-admin d-flex justify-content-end">
+          <button type="button" class="btn btn-outline-success me-md-2" data-bs-dismiss="modal" style="width:113px;">Cancel</button>
+          <button type="button" class="btn btn-outline-success" style="width:93px;">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

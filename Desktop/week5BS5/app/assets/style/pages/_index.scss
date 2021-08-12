@@ -1,0 +1,30 @@
+.admin {
+    width: 75%;
+    height: 100vh;
+    .admin-article {
+        .material-icons {
+            vertical-align: bottom;  /*icon跟文字對齊*/
+        }
+    }
+}
+.admin-helper-link {
+    color: #000;
+    text-decoration: none;
+} 
+
+.admin-modal-logo {
+    img{
+        width: 141px;
+        height: 141px;
+    }
+}
+
+.page-link {
+    border: $success 1px solid;
+    color: #000;
+    text-decoration: none;
+    &:hover {
+        color: $light;
+        background-color: $success;
+    }
+}
