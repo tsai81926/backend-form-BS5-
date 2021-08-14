@@ -19,6 +19,14 @@
     }
 }
 
+.admin-editor-item {
+    img {
+        width:141px;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
 .page-link {
     border: $success 1px solid;
     color: #000;
